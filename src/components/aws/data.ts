@@ -2,7 +2,7 @@ export interface AWSService {
     id: string
     title: string
     shortTitle: string
-    icon: string
+    icon?: string // Now optional as we'll use Lucide icons based on ID
     description: string
     longDescription: string
     keyFeatures: string[]
@@ -784,6 +784,434 @@ export const awsServices: AWSService[] = [
             },
         ],
     },
+    {
+        id: "ec2-windows",
+        title: "Amazon EC2 for Windows",
+        shortTitle: "EC2 for Windows",
+        description: "Run Windows workloads on secure, reliable, and high-performance infrastructure.",
+        longDescription: "Amazon EC2 for Windows provides a secure and reliable environment to run Windows-based applications and workloads on AWS's proven computing environment. It offers a wide selection of instances pre-configured with Windows Server and optimized for different use cases.",
+        keyFeatures: [
+            "Wide selection of Windows Server versions",
+            "Integration with AWS services",
+            "License included options",
+            "Optimized for Windows workloads",
+            "Secure and reliable infrastructure",
+            "Flexible pricing options"
+        ],
+        benefits: [
+            {
+                title: "Cost Optimization",
+                description: "Reduce costs with pay-as-you-go pricing and license-included options that eliminate upfront investments."
+            },
+            {
+                title: "Performance",
+                description: "Run Windows workloads on high-performance infrastructure optimized for different use cases."
+            },
+            {
+                title: "Security",
+                description: "Benefit from AWS's robust security features and regular security patches for Windows instances."
+            },
+            {
+                title: "Scalability",
+                description: "Easily scale your Windows applications up or down based on demand."
+            },
+            {
+                title: "Integration",
+                description: "Seamlessly integrate with other AWS services for a complete cloud solution."
+            },
+            {
+                title: "Management",
+                description: "Simplify management with AWS tools and services designed for Windows environments."
+            }
+        ],
+        howItWorks: [
+            {
+                title: "Stage 1: Select Windows Instance",
+                description: "Choose from various Windows Server versions and instance types based on your workload requirements.",
+                icon: "Laptop"
+            },
+            {
+                title: "Stage 2: Configure and Launch",
+                description: "Configure your instance with the desired settings and launch it in your AWS environment.",
+                icon: "Settings"
+            },
+            {
+                title: "Stage 3: Connect and Use",
+                description: "Connect to your Windows instance using RDP and install your applications and workloads.",
+                icon: "Monitor"
+            },
+            {
+                title: "Stage 4: Manage and Scale",
+                description: "Manage your Windows instances and scale them based on your needs using AWS management tools.",
+                icon: "BarChart"
+            }
+        ],
+        useCases: [
+            {
+                title: "Windows Applications",
+                description: "Run Windows-based applications in the cloud without changing your code or architecture.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "Microsoft SQL Server",
+                description: "Deploy Microsoft SQL Server databases on optimized instances with license-included options.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "Windows Development and Testing",
+                description: "Create Windows development and testing environments that can be quickly provisioned and decommissioned.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "Windows Desktop as a Service",
+                description: "Provide virtual Windows desktops to your users with Amazon WorkSpaces integration.",
+                image: "/placeholder.svg?height=300&width=500"
+            }
+        ],
+        faqs: [
+            {
+                question: "What Windows Server versions are available?",
+                answer: "AWS offers multiple Windows Server versions including Windows Server 2022, 2019, 2016, and 2012 R2. Both license-included and BYOL (Bring Your Own License) options are available."
+            },
+            {
+                question: "How does licensing work for Windows on EC2?",
+                answer: "You can choose license-included instances where the Windows Server license cost is included in the hourly price, or you can bring your own license (BYOL) if you have Microsoft License Mobility through Software Assurance."
+            },
+            {
+                question: "Can I run Microsoft SQL Server on EC2 for Windows?",
+                answer: "Yes, you can run Microsoft SQL Server on EC2 for Windows with either license-included instances or by bringing your own SQL Server licenses."
+            },
+            {
+                question: "How do I connect to my Windows EC2 instance?",
+                answer: "You connect to your Windows EC2 instance using Remote Desktop Protocol (RDP). AWS provides the necessary information and tools to establish a secure RDP connection to your instance."
+            },
+            {
+                question: "Can I join my EC2 Windows instances to Active Directory?",
+                answer: "Yes, you can join your EC2 Windows instances to Microsoft Active Directory. AWS offers AWS Directory Service for Microsoft Active Directory, or you can connect to your on-premises Active Directory."
+            }
+        ]
+    },
+    {
+        id: "aws-transfer-family",
+        title: "AWS Transfer Family",
+        shortTitle: "Transfer Family",
+        description: "Securely transfer files to AWS storage services using SFTP, FTPS, and FTP protocols.",
+        longDescription: "AWS Transfer Family provides fully managed support for file transfers directly into and out of Amazon S3 or Amazon EFS. It supports Secure File Transfer Protocol (SFTP), File Transfer Protocol over SSL (FTPS), and File Transfer Protocol (FTP).",
+        keyFeatures: [
+            "Support for SFTP, FTPS, and FTP protocols",
+            "Integration with Amazon S3 and Amazon EFS",
+            "Authentication options including AWS Directory Service",
+            "Custom domain names",
+            "Fully managed service with high availability",
+            "Pay-as-you-go pricing"
+        ],
+        benefits: [
+            {
+                title: "Simplified File Transfer",
+                description: "Enable file transfers without the need to manage infrastructure, reducing operational overhead."
+            },
+            {
+                title: "Security",
+                description: "Secure your file transfers with encryption in transit and integration with AWS security services."
+            },
+            {
+                title: "Scalability",
+                description: "Automatically scale to handle your file transfer workloads without capacity planning."
+            },
+            {
+                title: "Compatibility",
+                description: "Support for industry-standard protocols ensures compatibility with existing workflows and tools."
+            },
+            {
+                title: "Integration",
+                description: "Seamlessly integrate with AWS storage services and the broader AWS ecosystem."
+            },
+            {
+                title: "Cost-Effective",
+                description: "Pay only for what you use with no upfront costs or long-term commitments."
+            }
+        ],
+        howItWorks: [
+            {
+                title: "Stage 1: Create Server",
+                description: "Create a Transfer Family server with your chosen protocol (SFTP, FTPS, or FTP) and endpoint type.",
+                icon: "Server"
+            },
+            {
+                title: "Stage 2: Configure Authentication",
+                description: "Set up user authentication using service-managed users, AWS Directory Service, or custom identity providers.",
+                icon: "Key"
+            },
+            {
+                title: "Stage 3: Set Up Storage",
+                description: "Configure Amazon S3 buckets or Amazon EFS file systems as the storage backend for your file transfers.",
+                icon: "Database"
+            },
+            {
+                title: "Stage 4: Transfer Files",
+                description: "Users can now transfer files using their existing SFTP, FTPS, or FTP clients, with files stored directly in your AWS storage.",
+                icon: "Upload"
+            }
+        ],
+        useCases: [
+            {
+                title: "B2B File Transfers",
+                description: "Securely exchange files with business partners, suppliers, and customers using familiar file transfer protocols.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "Data Lake Ingestion",
+                description: "Ingest data into your AWS data lakes from external sources using standard file transfer protocols.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "Content Distribution",
+                description: "Distribute content to partners and customers with secure, reliable file transfer capabilities.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "Legacy System Integration",
+                description: "Connect legacy systems that use SFTP, FTPS, or FTP to modern AWS cloud storage and services.",
+                image: "/placeholder.svg?height=300&width=500"
+            }
+        ],
+        faqs: [
+            {
+                question: "What protocols does AWS Transfer Family support?",
+                answer: "AWS Transfer Family supports Secure File Transfer Protocol (SFTP), File Transfer Protocol over SSL (FTPS), and File Transfer Protocol (FTP)."
+            },
+            {
+                question: "What storage services can I use with AWS Transfer Family?",
+                answer: "AWS Transfer Family integrates with Amazon S3 and Amazon EFS, allowing you to store transferred files directly in these services."
+            },
+            {
+                question: "How does user authentication work?",
+                answer: "AWS Transfer Family offers multiple authentication options: service-managed users (where you create and manage users within the service), AWS Directory Service for Microsoft Active Directory, and custom identity providers through AWS Lambda."
+            },
+            {
+                question: "Can I use my own domain name?",
+                answer: "Yes, you can use your own domain name with AWS Transfer Family by associating a custom hostname with your server endpoint, making the transition seamless for your users."
+            },
+            {
+                question: "How is AWS Transfer Family priced?",
+                answer: "AWS Transfer Family pricing is based on the provisioned endpoint hours and data transferred. You pay for the time your Transfer Family server is provisioned and the amount of data transferred over your server endpoint."
+            }
+        ]
+    },
+    {
+        id: "aws-control-tower",
+        title: "AWS Control Tower",
+        shortTitle: "Control Tower",
+        description: "Set up and govern a secure, compliant multi-account AWS environment with automated deployment.",
+        longDescription: "AWS Control Tower provides a simplified way to set up and govern a secure, compliant, multi-account AWS environment based on best practices. It automates the setup of a landing zone, an environment that consists of multi-account structures, identity and access management, governance, data security, network design, and logging.",
+        keyFeatures: [
+            "Automated landing zone setup",
+            "Guardrails for security and compliance",
+            "Account factory for standardized provisioning",
+            "Centralized logging and monitoring",
+            "Dashboard for visibility and governance",
+            "Integration with AWS Organizations"
+        ],
+        benefits: [
+            {
+                title: "Simplified Setup",
+                description: "Set up a multi-account environment in a few clicks, reducing the time from days to hours."
+            },
+            {
+                title: "Standardized Governance",
+                description: "Implement consistent governance across all accounts with preventive and detective guardrails."
+            },
+            {
+                title: "Automated Compliance",
+                description: "Automatically enforce compliance policies across your entire AWS environment."
+            },
+            {
+                title: "Centralized Management",
+                description: "Manage your multi-account environment from a single dashboard with comprehensive visibility."
+            },
+            {
+                title: "Best Practices",
+                description: "Implement AWS best practices for security, operations, and compliance from the start."
+            },
+            {
+                title: "Scalability",
+                description: "Easily scale your AWS environment while maintaining consistent governance and compliance."
+            }
+        ],
+        howItWorks: [
+            {
+                title: "Stage 1: Set Up Landing Zone",
+                description: "Deploy a landing zone with a multi-account structure, including management, log archive, and audit accounts.",
+                icon: "Home"
+            },
+            {
+                title: "Stage 2: Configure Guardrails",
+                description: "Implement preventive and detective guardrails to enforce security and compliance policies across accounts.",
+                icon: "Shield"
+            },
+            {
+                title: "Stage 3: Provision Accounts",
+                description: "Use Account Factory to provision new accounts with standardized configurations and guardrails.",
+                icon: "Plus"
+            },
+            {
+                title: "Stage 4: Monitor and Govern",
+                description: "Monitor your environment through the Control Tower dashboard and ensure ongoing compliance with guardrails.",
+                icon: "BarChart"
+            }
+        ],
+        useCases: [
+            {
+                title: "Enterprise Cloud Adoption",
+                description: "Accelerate cloud adoption in large enterprises with a secure, compliant foundation that scales with your needs.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "Regulatory Compliance",
+                description: "Implement and maintain compliance with regulatory requirements across your entire AWS environment.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "Multi-Team Environments",
+                description: "Support multiple teams and projects with isolated accounts while maintaining centralized governance and security.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "Mergers and Acquisitions",
+                description: "Quickly integrate acquired companies into your AWS environment with consistent security and governance.",
+                image: "/placeholder.svg?height=300&width=500"
+            }
+        ],
+        faqs: [
+            {
+                question: "What is a landing zone in AWS Control Tower?",
+                answer: "A landing zone is a well-architected, multi-account AWS environment that follows AWS best practices for security, compliance, and operational excellence. It includes account structure, identity management, security policies, network design, and logging configuration."
+            },
+            {
+                question: "What are guardrails in AWS Control Tower?",
+                answer: "Guardrails are governance rules that provide ongoing governance for your entire AWS environment. They can be preventive (using service control policies to prevent actions) or detective (using AWS Config rules to detect non-compliance)."
+            },
+            {
+                question: "How does AWS Control Tower work with existing AWS accounts?",
+                answer: "AWS Control Tower can enroll existing AWS accounts into its governance, allowing you to extend Control Tower's benefits to your existing AWS environment. This process is called account enrollment."
+            },
+            {
+                question: "Can I customize AWS Control Tower?",
+                answer: "Yes, AWS Control Tower allows for customization through Customizations for AWS Control Tower (CfCT), which enables you to add your own templates, policies, and configurations to your Control Tower environment."
+            },
+            {
+                question: "What is the difference between AWS Control Tower and AWS Organizations?",
+                answer: "AWS Control Tower is built on top of AWS Organizations and provides additional functionality for setting up and governing a multi-account environment. While AWS Organizations focuses on account management and policy enforcement, Control Tower adds landing zone setup, guardrails, account factory, and a governance dashboard."
+            }
+        ]
+    },
+    {
+        id: "aws-smb-competency",
+        title: "AWS SMB Competency",
+        shortTitle: "SMB Competency",
+        description: "Specialized expertise in supporting small and medium-sized businesses on their cloud journey.",
+        longDescription: "The AWS SMB Competency recognizes partners with proven technical expertise and customer success in supporting small and medium-sized businesses (SMBs). As an AWS SMB Competency Partner, we have demonstrated our ability to help SMBs achieve their business goals by leveraging AWS services.",
+        keyFeatures: [
+            "Specialized SMB expertise",
+            "Cost-effective solutions",
+            "Simplified cloud adoption",
+            "Scalable infrastructure",
+            "Security best practices",
+            "Ongoing optimization and support"
+        ],
+        benefits: [
+            {
+                title: "Tailored Solutions",
+                description: "Solutions designed specifically for the unique needs and constraints of small and medium-sized businesses."
+            },
+            {
+                title: "Cost Optimization",
+                description: "Maximize value while minimizing costs with right-sized solutions that align with SMB budgets."
+            },
+            {
+                title: "Reduced Complexity",
+                description: "Simplified cloud adoption and management processes designed for organizations with limited IT resources."
+            },
+            {
+                title: "Growth Support",
+                description: "Scalable solutions that grow with your business without requiring significant reinvestment."
+            },
+            {
+                title: "Security Focus",
+                description: "Enterprise-grade security practices adapted for SMB environments and requirements."
+            },
+            {
+                title: "Expert Guidance",
+                description: "Access to specialized expertise in SMB cloud adoption, migration, and optimization."
+            }
+        ],
+        howItWorks: [
+            {
+                title: "Stage 1: Assessment",
+                description: "We assess your current environment, business goals, and constraints to develop a tailored cloud strategy.",
+                icon: "Search"
+            },
+            {
+                title: "Stage 2: Solution Design",
+                description: "Our experts design cost-effective cloud solutions that address your specific business needs and challenges.",
+                icon: "PenTool"
+            },
+            {
+                title: "Stage 3: Implementation",
+                description: "We implement your cloud solutions with minimal disruption to your business operations.",
+                icon: "Cog"
+            },
+            {
+                title: "Stage 4: Optimization & Support",
+                description: "Ongoing optimization and support to ensure your cloud environment continues to meet your evolving business needs.",
+                icon: "TrendingUp"
+            }
+        ],
+        useCases: [
+            {
+                title: "Cloud Migration for SMBs",
+                description: "Migrate on-premises workloads to AWS with approaches tailored for SMB constraints and requirements.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "Cost-Effective Infrastructure",
+                description: "Implement right-sized cloud infrastructure that balances performance needs with budget constraints.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "SMB Application Modernization",
+                description: "Modernize legacy applications to improve performance, security, and cost-efficiency.",
+                image: "/placeholder.svg?height=300&width=500"
+            },
+            {
+                title: "Managed Cloud Services",
+                description: "Provide ongoing management and support for SMB cloud environments with limited internal IT resources.",
+                image: "/placeholder.svg?height=300&width=500"
+            }
+        ],
+        faqs: [
+            {
+                question: "What is the AWS SMB Competency?",
+                answer: "The AWS SMB Competency is a designation that recognizes AWS Partners with proven expertise in helping small and medium-sized businesses successfully adopt and leverage AWS services. Partners must demonstrate technical proficiency and documented customer success in working with SMBs."
+            },
+            {
+                question: "How does the AWS SMB Competency benefit my business?",
+                answer: "Working with an AWS SMB Competency Partner ensures you're partnering with a company that understands the unique challenges and constraints of SMBs. We provide solutions that are appropriately sized and priced for your business, with implementation approaches that minimize disruption and maximize value."
+            },
+            {
+                question: "What types of AWS solutions are appropriate for SMBs?",
+                answer: "SMBs can benefit from a wide range of AWS solutions, including infrastructure hosting, backup and disaster recovery, security and compliance, application hosting, and data analytics. The key is right-sizing these solutions to match your business needs and budget."
+            },
+            {
+                question: "How can SMBs control cloud costs?",
+                answer: "We help SMBs control cloud costs through proper architecture design, resource sizing, reserved instance planning, and ongoing optimization. Our solutions include monitoring and alerting for cost anomalies and regular reviews to identify savings opportunities."
+            },
+            {
+                question: "Can SMBs achieve the same security levels as larger enterprises?",
+                answer: "Yes, AWS provides enterprise-grade security capabilities that can be implemented for businesses of all sizes. As an AWS SMB Competency Partner, we help implement security best practices that are appropriate for your business size, compliance requirements, and risk profile."
+            }
+        ]
+    }
 ]
 
 export function getServiceById(id: string): AWSService | undefined {

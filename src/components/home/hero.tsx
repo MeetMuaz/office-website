@@ -33,7 +33,7 @@ export default function Hero() {
     <div className="flex flex-col">
       <main className="flex-1">
         <section className="relative flex w-full bg-white" ref={heroRef}>
-          <div className="container mx-auto flex items-center justify-center gap-8 max-md:flex-col">
+          <div className="container mx-auto flex items-center justify-center gap-8 mt-8 max-md:flex-col">
             <motion.div
               className="w-1/2 space-y-6 max-md:w-full"
               initial="hidden"
@@ -80,7 +80,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <BlurImage
-                src="/aws-partner-advanced logo.png"
+                src="/aws-partner-advanced-badge.png"
                 alt="IT Solutions"
                 width={1325}
                 height={1325}

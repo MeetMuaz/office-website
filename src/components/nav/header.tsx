@@ -63,6 +63,7 @@ export default function Header() {
   const menuItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
+    { name: 'AWS', path: '/aws' },
     {
       name: 'Services',
       path: '/services',
@@ -127,43 +128,43 @@ export default function Header() {
   )
 
   // AWS services
-  const awsServices = [
-    {
-      id: 'ec2',
-      title: 'Amazon EC2',
-      icon: <Cloud className="h-5 w-5 text-orange-500" />,
-    },
-    {
-      id: 's3',
-      title: 'Amazon S3',
-      icon: <Database className="h-5 w-5 text-orange-500" />,
-    },
-    {
-      id: 'lambda',
-      title: 'AWS Lambda',
-      icon: <Cog className="h-5 w-5 text-orange-500" />,
-    },
-    {
-      id: 'rds',
-      title: 'Amazon RDS',
-      icon: <Database className="h-5 w-5 text-orange-500" />,
-    },
-    {
-      id: 'cloudfront',
-      title: 'CloudFront',
-      icon: <Network className="h-5 w-5 text-orange-500" />,
-    },
-    {
-      id: 'route53',
-      title: 'Route 53',
-      icon: <Network className="h-5 w-5 text-orange-500" />,
-    },
-  ]
+  // const awsServices = [
+  //   {
+  //     id: 'ec2',
+  //     title: 'Amazon EC2',
+  //     icon: <Cloud className="h-5 w-5 text-orange-500" />,
+  //   },
+  //   {
+  //     id: 's3',
+  //     title: 'Amazon S3',
+  //     icon: <Database className="h-5 w-5 text-orange-500" />,
+  //   },
+  //   {
+  //     id: 'lambda',
+  //     title: 'AWS Lambda',
+  //     icon: <Cog className="h-5 w-5 text-orange-500" />,
+  //   },
+  //   {
+  //     id: 'rds',
+  //     title: 'Amazon RDS',
+  //     icon: <Database className="h-5 w-5 text-orange-500" />,
+  //   },
+  //   {
+  //     id: 'cloudfront',
+  //     title: 'CloudFront',
+  //     icon: <Network className="h-5 w-5 text-orange-500" />,
+  //   },
+  //   {
+  //     id: 'route53',
+  //     title: 'Route 53',
+  //     icon: <Network className="h-5 w-5 text-orange-500" />,
+  //   },
+  // ]
 
   // Add AWS services to the categories
   const allServicesByCategory = {
     ...servicesByCategory,
-    'AWS SERVICES': awsServices,
+    // 'AWS SERVICES': awsServices,
   }
 
   return (

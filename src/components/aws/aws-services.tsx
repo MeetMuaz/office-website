@@ -4,9 +4,8 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Server, Database, Cloud, HardDrive, ArrowRightLeft, Rocket, Monitor, Upload, Shield, Building } from 'lucide-react'
 import { awsServices } from './data'
-import BlurImage from '../mis/blur-image'
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -25,6 +24,34 @@ const staggerContainer = {
       staggerChildren: 0.2,
     },
   },
+}
+
+// Function to get the appropriate icon based on service ID
+function getServiceIcon(serviceId: string) {
+  switch (serviceId) {
+    case 'aws-dsr':
+      return <HardDrive className="h-10 w-10" />
+    case 'amazon-ec2':
+      return <Server className="h-10 w-10" />
+    case 'amazon-s3':
+      return <Database className="h-10 w-10" />
+    case 'amazon-ebs':
+      return <HardDrive className="h-10 w-10" />
+    case 'aws-dms':
+      return <ArrowRightLeft className="h-10 w-10" />
+    case 'aws-mgn':
+      return <Rocket className="h-10 w-10" />
+    case 'ec2-windows':
+      return <Monitor className="h-10 w-10" />
+    case 'aws-transfer-family':
+      return <Upload className="h-10 w-10" />
+    case 'aws-control-tower':
+      return <Shield className="h-10 w-10" />
+    case 'aws-smb-competency':
+      return <Building className="h-10 w-10" />
+    default:
+      return <Cloud className="h-10 w-10" />
+  }
 }
 
 export default function AWSServices() {
@@ -77,13 +104,9 @@ export default function AWSServices() {
                 <div className="h-full rounded-xl border border-gray-200 bg-white p-6 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
                   <div className="space-y-4">
                     <div className="mb-4 flex justify-center">
-                      <BlurImage
-                        src={service.icon || '/placeholder.svg'}
-                        alt={service.title}
-                        width={80}
-                        height={80}
-                        className="transition-transform duration-300 group-hover:scale-110"
-                      />
+                      <div className="h-20 w-20 flex items-center justify-center rounded-full bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
+                        {getServiceIcon(service.id)}
+                      </div>
                     </div>
                     <h3 className="text-center text-xl font-semibold">
                       {service.title}
@@ -94,7 +117,7 @@ export default function AWSServices() {
                     <div className="flex justify-center pt-4">
                       <Link
                         href={`/aws/${service.id}`}
-                        className="inline-flex items-center rounded-md bg-[#7B68EE] px-6 py-2 text-white transition-all duration-300 hover:bg-[#6A5ACD]"
+                        className="inline-flex items-center rounded-md bg-primary  px-6 py-2 text-white transition-all duration-300 hover:bg-primary/90"
                       >
                         Learn More <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
