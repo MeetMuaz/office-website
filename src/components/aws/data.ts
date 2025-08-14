@@ -2,6 +2,7 @@ export interface AWSService {
     id: string
     title: string
     shortTitle: string
+    image?: string
     icon?: string // Now optional as we'll use Lucide icons based on ID
     description: string
     longDescription: string
@@ -1108,6 +1109,7 @@ export const awsServices: AWSService[] = [
     {
         id: "aws-smb-competency",
         title: "AWS SMB Competency",
+        image: "/black-woman.jpg",
         shortTitle: "SMB Competency",
         description: "Specialized expertise in supporting small and medium-sized businesses on their cloud journey.",
         longDescription: "The AWS SMB Competency recognizes partners with proven technical expertise and customer success in supporting small and medium-sized businesses (SMBs). As an AWS SMB Competency Partner, we have demonstrated our ability to help SMBs achieve their business goals by leveraging AWS services.",
@@ -1169,30 +1171,30 @@ export const awsServices: AWSService[] = [
         ],
         useCases: [
             {
-                title: "Cloud Migration for SMBs",
-                description: "Migrate on-premises workloads to AWS with approaches tailored for SMB constraints and requirements.",
-                image: "/placeholder.svg?height=300&width=500"
+                title: "Ecopeaks Limited - Enterprise Client Management Platform",
+                description: "Ecopeaks Limited required a comprehensive client management platform to address critical business challenges including data fragmentation, manual processes, and limited client accessibility. We delivered a multi-tier React.js SPA with CloudFront CDN, Node.js microservices on ECS Fargate, and PostgreSQL Multi-AZ with ElastiCache Redis. The solution achieved 99.5% system uptime, 60% reduction in project delivery time, and support for 10x client growth.",
+                image: "/ecopeaksgroup.png"
             },
             {
-                title: "Cost-Effective Infrastructure",
-                description: "Implement right-sized cloud infrastructure that balances performance needs with budget constraints.",
-                image: "/placeholder.svg?height=300&width=500"
+                title: "Blythe and Junot - Scalable Cloud File Sharing",
+                description: "Blythe and Junot, a leading Nigerian manufacturer and distributor of hygiene, personal, and dental care products, needed a modern file-sharing solution. We implemented a scalable file-sharing architecture using Amazon S3 and AWS Storage Gateway with AWS File Gateway for secure SMB access. The solution provides cloud-first, highly accessible file-sharing that supports both in-office and remote teams effortlessly.",
+                image: "/blytheandjunot.png"
             },
             {
-                title: "SMB Application Modernization",
-                description: "Modernize legacy applications to improve performance, security, and cost-efficiency.",
-                image: "/placeholder.svg?height=300&width=500"
+                title: "Gozian Healthcare - Cloud Data Warehouse Migration",
+                description: "Gozian Healthcare partnered with us to migrate their 5TB+ on-premise MS SQL data warehouse to AWS with minimal downtime. We delivered a fully managed cloud analytics platform using AWS Database Migration Service (DMS), Glue for ETL, and Amazon Redshift. The result is a fast, secure, and scalable analytics platform that delivers real-time insights while reducing operational overhead.",
+                image: "/gozianhealthcare.png"
             },
             {
-                title: "Managed Cloud Services",
-                description: "Provide ongoing management and support for SMB cloud environments with limited internal IT resources.",
-                image: "/placeholder.svg?height=300&width=500"
+                title: "Olive & Olive - Unified Digital Platform",
+                description: "Olive & Olive needed to unify four business verticals—IT Services, Energy Solutions, eCommerce, and Advisory—into a single digital ecosystem. We delivered a multi-tenant, cloud-native platform on AWS with Amazon Cognito for unified authentication and ECS Fargate microservices. The solution automates manual workflows, enables single sign-on across all services, and drives revenue growth while expanding to five Nigerian states plus Ghana.",
+                image: "/oliveandolive.png"
             }
         ],
         faqs: [
             {
                 question: "What is the AWS SMB Competency?",
-                answer: "The AWS SMB Competency is a designation that recognizes AWS Partners with proven expertise in helping small and medium-sized businesses successfully adopt and leverage AWS services. Partners must demonstrate technical proficiency and documented customer success in working with SMBs."
+                answer: "The AWS SMB Competency is a designation that recognizes AWS Partners with proven expertise in helping small and medium-sized businesses successfully adopt and leverage AWS services. Partners must demonstrate technical proficiency and documented customer success in working with SMBs. Our case studies with Ecopeaks Limited, Blythe and Junot, Gozian Healthcare, and Olive & Olive demonstrate our proven track record in delivering successful SMB solutions."
             },
             {
                 question: "How does the AWS SMB Competency benefit my business?",

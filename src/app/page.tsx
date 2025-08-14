@@ -1,5 +1,6 @@
 import Hero from '@/components/home/hero'
 import HeroCarosuel from '@/components/home/hero-carousel'
+import HomeCTA from '@/components/home/home-cta'
 import Services from '@/components/home/services'
 import Solutions from '@/components/home/solutions'
 import LogoCarousel from '@/components/home/sponsors-section'
@@ -20,6 +21,7 @@ const HomePage = () => {
       <Solutions />
       <Hero />
       <Testimonials />
+      <HomeCTA />
     </div>
   )
 }

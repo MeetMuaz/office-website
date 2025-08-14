@@ -3,11 +3,27 @@
 import { useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import BlurImage from '../mis/blur-image'
-import { Button } from '../ui/button'
 import { cn } from '@/lib/utils'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-const images = ['/image1.jpg', '/image2.jpg', '/image3.jpg']
+const slides = [
+  {
+    image: '/image1.jpg',
+    title: 'Customer Centric',
+    description: 'We put our customers at the heart of every decision, ensuring their needs shape our solutions.'
+  },
+  {
+    image: '/image2.jpg',
+    title: 'Excellent Delivery',
+    description: 'We deliver with precision, speed, and a commitment to exceeding expectations every time.'
+  },
+  {
+    image: '/image3.jpg',
+    title: 'Reliability',
+    description: 'Count on us for consistent, dependable service that builds lasting trust.'
+  }
+]
+
 
 const HeroCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 100 })
@@ -30,11 +46,11 @@ const HeroCarousel = () => {
       {/* Carousel */}
       <div ref={emblaRef} className="h-full overflow-hidden">
         <div className="flex h-full">
-          {images.map((src, index) => (
+          {slides.map((slide, index) => (
             <div key={index} className="relative min-w-0 flex-[0_0_100%]">
               <BlurImage
-                src={src || '/placeholder.svg'}
-                alt=""
+                src={slide.image || '/placeholder.svg'}
+                alt={slide.title}
                 fill
                 className="object-cover"
                 priority={index === 0}
@@ -71,27 +87,20 @@ const HeroCarousel = () => {
             <div className="flex items-center justify-between">
               <div className="space-y-4">
                 <h2 className="text-xl font-bold text-gray-900 md:text-2xl">
-                  Customer Centric
+                  {slides[selectedIndex].title}
                 </h2>
-                <p className="max-w-xl text-sm text-gray-600 md:text-base">
-                  We are a technology company with specialization in business
-                  application automation, protection assurance, IT risk and
-                  compliance services, and intelligent solutions deployment
+                <p className="max-w-xl text-base text-gray-600 md:text-lg">
+                  {slides[selectedIndex].description}
                 </p>
               </div>
               <div className="hidden md:block">
-                <Button
-                  variant="default"
-                  className="rounded-full border-2 border-[#003B5C] bg-transparent px-6 text-[#003B5C] transition-colors hover:bg-[#003B5C] hover:text-white"
-                >
-                  Get Started
-                </Button>
+                
               </div>
             </div>
             <div className="mt-6 flex items-center justify-between md:mt-0">
               {/* Indicators - Redesigned as a progress bar */}
               <div className="flex items-center gap-3">
-                {images.map((_, index) => (
+                {slides.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => scrollTo(index)}
@@ -106,12 +115,7 @@ const HeroCarousel = () => {
                 ))}
               </div>
               <div className="md:hidden">
-                <Button
-                  variant="default"
-                  className="rounded-full border-2 border-[#003B5C] bg-transparent px-6 text-[#003B5C] transition-colors hover:bg-[#003B5C] hover:text-white"
-                >
-                  Get Started
-                </Button>
+               
               </div>
             </div>
           </div>

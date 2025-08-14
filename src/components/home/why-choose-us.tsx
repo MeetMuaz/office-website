@@ -1,8 +1,6 @@
 'use client'
 
 import React from 'react'
-
-import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -10,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { CheckCircle, ArrowRight } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
@@ -57,17 +55,7 @@ const iconVariants = {
   },
 }
 
-const buttonVariants = {
-  rest: { x: 0 },
-  hover: {
-    x: 5,
-    transition: {
-      repeat: Number.POSITIVE_INFINITY,
-      repeatType: 'mirror' as const,
-      duration: 0.8,
-    },
-  },
-}
+
 
 export default function WhyChooseUs() {
   return (
@@ -182,20 +170,6 @@ export default function WhyChooseUs() {
                         whileHover="hover"
                         className="w-full"
                       >
-                        <Button
-                          variant={card.isPrimary ? 'secondary' : 'outline'}
-                          className={cn(
-                            'group w-full justify-between',
-                            card.isPrimary
-                              ? 'bg-white/20 text-white hover:bg-white/30'
-                              : 'border-primary/20 text-primary hover:bg-primary/5'
-                          )}
-                        >
-                          <span>Learn More</span>
-                          <motion.div variants={buttonVariants}>
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                          </motion.div>
-                        </Button>
                       </motion.div>
                     </CardFooter>
                   </Card>

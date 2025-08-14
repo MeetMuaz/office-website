@@ -51,14 +51,14 @@ export default function Hero() {
                 className="text-4xl font-bold tracking-tight md:text-5xl"
               >
                 Transform Your Business with{' '}
-                <span className="text-primary">Reliable and Innovative</span> IT
-                Solutions
+                <span className="text-primary font-extrabold">Reliable and Innovative</span> IT
+                Solutions tailored to your success
               </motion.h1>
               <motion.p
                 variants={fadeIn}
-                className="text-muted-foreground text-lg"
+                className="text-muted-foreground text-lg font-medium"
               >
-                As an AWS Select Tier Partner, we help businesses accelerate
+                As a trusted AWS Advance Partner, we help businesses accelerate
                 growth, reduce costs, and achieve digital transformation.
               </motion.p>
               <motion.div
@@ -66,7 +66,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button size="lg" className="font-semibold">
+                <Button size="lg" className="font-bold bg-primary hover:bg-primary/90 text-white px-8 py-3">
                   Contact an expert
                 </Button>
               </motion.div>

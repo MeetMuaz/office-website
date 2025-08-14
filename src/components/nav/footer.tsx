@@ -97,15 +97,20 @@ const Footer = () => {
           {[
             {
               title: 'Company',
-              links: ['About Us', 'Services', 'Clients', 'Blog'],
+              links: [
+                { name: 'About Us', href: '/about' },
+                { name: 'Services', href: '/services' },
+                { name: 'Clients', href: '/clients' },
+                { name: 'Blog', href: '/blog' },
+              ],
             },
             {
               title: 'Services',
               links: [
-                'ICT Consulting',
-                'Energy Consulting',
-                'AWS Services',
-                'Cloud Computing',
+                { name: 'ICT Consulting', href: '/services' },
+                { name: 'Energy Consulting', href: '/services' },
+                { name: 'AWS Services', href: '/aws' },
+                { name: 'Cloud Computing', href: '/services' },
               ],
             },
             {
@@ -134,10 +139,10 @@ const Footer = () => {
                       }}
                     >
                       <Link
-                        href={`/${column.title.toLowerCase()}/${link.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={link.href}
                         className="text-white/70 hover:text-white"
                       >
-                        {link}
+                        {link.name}
                       </Link>
                     </motion.li>
                   ))}

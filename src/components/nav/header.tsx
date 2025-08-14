@@ -8,10 +8,6 @@ import {
   X,
   ArrowRight,
   ChevronDown,
-  Cloud,
-  Network,
-  Database,
-  Cog,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import BlurImage from '../mis/blur-image'
