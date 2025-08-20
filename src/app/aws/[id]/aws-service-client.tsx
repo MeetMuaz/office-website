@@ -242,7 +242,7 @@ export default function AWSServiceClient({ service }: AWSServiceClientProps) {
         </motion.div>
 
         {/* Use Cases */}
-        <motion.div
+        {service.useCases ? (<motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -280,7 +280,8 @@ export default function AWSServiceClient({ service }: AWSServiceClientProps) {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div>) : null}
+        
       </div>
 
       {/* Why Choose Digitspot */}
@@ -339,7 +340,7 @@ export default function AWSServiceClient({ service }: AWSServiceClientProps) {
           >
             <div className="relative h-[350px] overflow-hidden rounded-xl">
               <BlurImage
-                src="/placeholder.svg?height=350&width=500"
+                src="/certified-expert.jpg"
                 alt="Digitspot AWS Expertise"
                 fill
                 className="object-cover"
@@ -349,7 +350,8 @@ export default function AWSServiceClient({ service }: AWSServiceClientProps) {
                   AWS Certified Experts
                 </h3>
                 <p className="text-white/80">
-                  Trusted implementation and support
+                  Our team is AWS certified and has a proven track record of
+                  delivering successful
                 </p>
               </div>
             </div>
