@@ -1181,9 +1181,9 @@ export const awsServices: AWSService[] = [
                 image: "/blytheandjunot.png"
             },
             {
-                title: "Gozian Healthcare - Cloud Data Warehouse Migration",
-                description: "Gozian Healthcare partnered with us to migrate their 5TB+ on-premise MS SQL data warehouse to AWS with minimal downtime. We delivered a fully managed cloud analytics platform using AWS Database Migration Service (DMS), Glue for ETL, and Amazon Redshift. The result is a fast, secure, and scalable analytics platform that delivers real-time insights while reducing operational overhead.",
-                image: "/gozianhealthcare.png"
+                title: "CleatPath",
+                description: "CleatPath, a multifaceted Nigerian company across IT and Power & Green Energy sectors, needed high availability, scalability, and cost efficiency. We implemented a multi-AZ serverless architecture using AWS Lambda, API Gateway, and Step Functions with automated scaling from 0 to 1000+ concurrent executions, achieving 99.9% uptime and 60% cost reduction through pay-per-use model.",
+                image: "/cleatpath.png"
             },
             {
                 title: "Olive & Olive - Unified Digital Platform",
@@ -1214,108 +1214,129 @@ export const awsServices: AWSService[] = [
             }
         ]
     },
-    {
-        id: "aws-well-architected-framework",
-        title: "Digitspot Well-Architected GTM Strategy",
-        image: "/aws-well-architected.png",
-        shortTitle: "Well-Architected",
-        description: "Digitspot Well-Architected go to market strategy.",
-        longDescription: "The Digitspot Well-Architected Go-to-Market Strategy is built on the AWS Well-Architected Framework, which provides a consistent and structured approach for evaluating and improving cloud architectures. Our strategy focuses on helping small, medium, and large-sized businesses adopt AWS best practices across the six core pillars operational excellence, security, reliability, performance efficiency, cost optimization and sustainability. By integrating these principles into customer workflows, we deliver scalable, secure, and cost-effective solutions that align with business objectives. This approach not only reduces risks and inefficiencies but also accelerates innovation and growth for businesses leveraging the cloud.",
+{
+  id: "aws-well-architected-framework",
+  title: "AWS Well-Architected Framework GTM Strategy",
+  image: "/aws-well-architected.png",
+  shortTitle: "Well-Architected",
+  description: "Go-to-market strategy built on the AWS Well-Architected Framework.",
+  longDescription:
+    "Digitspot’s Go-to-Market Strategy is built on the AWS Well-Architected Framework, which provides a consistent and structured approach for evaluating and improving cloud architectures. Our strategy focuses on helping small, medium, and large-sized businesses adopt AWS best practices across the six core pillars: operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability. By integrating these principles into customer workflows, we deliver scalable, secure, and cost-effective solutions that align with business objectives. This approach not only reduces risks and inefficiencies but also accelerates innovation and growth for businesses leveraging the cloud.",
 
-        keyFeatures: [
-            "Operational excellence",
-            "Security best practices",
-            "Cost optimization",
-            "Reliability",
-            "Performance efficiency",
-            "Sustainability"
-        ],
-        benefits: [
-            {
-                title: "Operational excellence",
-                description: "Streamlined processes and best practices that enhance efficiency and effectiveness in cloud operations."
-            },
-            {
-                title: "Security best practices",
-                description: "Proven security frameworks and guidelines that protect sensitive data and ensure compliance."
-            },
-            {
-                title: "Cost optimization",
-                description: "Strategies to reduce cloud spending while maximizing performance and value."
-            },
-            {
-                title: "Reliability",
-                description: "Architectures designed for high availability and resilience against failures."
-            },
-            {
-                title: "Performance efficiency",
-                description: "Optimized resource utilization to deliver fast and responsive applications."
-            },
-            {
-                title: "Sustainability",
-                description: "Green cloud practices that minimize environmental impact and promote sustainability."
-            }
-        ],
-       howItWorks: [
-  {
-    title: "Stage 1: Strategic Positioning",
-    description: "Digitspot empowers organizations to build, optimize, and scale secure, resilient, cost-efficient, and sustainable cloud environments. By working toward the AWS Well-Architected Framework, we demonstrate our commitment to delivering cloud solutions aligned with AWS best practices and industry standards.",
-    icon: "Search"
-  },
-  {
-    title: "Stage 2: Target Market",
-    description: "We focus on industries such as financial services, healthcare, public sector, and SaaS providers. Our primary buyer personas include CIOs, CTOs, VPs of Engineering, and Cloud/DevOps leaders. We address customer pain points like rising cloud costs, compliance risks, operational inefficiencies, and sustainability challenges.",
-    icon: "Users"
-  },
-  {
-    title: "Stage 3: Service Offerings",
-    description: "Digitspot provides AWS Well-Architected Reviews, remediation and optimization engagements, managed cloud services, and industry-specific playbooks tailored for compliance-intensive sectors like healthcare and financial services.",
-    icon: "Cog"
-  },
-  {
-    title: "Stage 4: Market Activation",
-    description: "We activate the market through AWS-aligned campaigns, thought leadership content (case studies, whitepapers, workshops), and targeted sales initiatives. Collaboration with AWS Partner Development Managers and participation in AWS events help drive visibility and pipeline growth.",
-    icon: "TrendingUp"
-  },
-  {
-    title: "Stage 5: Differentiation",
-    description: "Our differentiation lies in embedding sustainability into every engagement, leveraging automation and governance tools such as AWS Config and guardrails, and delivering agile, outcomes-driven customer experiences compared to slower, less flexible consultancies.",
-    icon: "Sparkles"
-  },
-  {
-    title: "Stage 6: Success Metrics",
-    description: "We measure success through KPIs like the number of Well-Architected Reviews conducted, conversion rates from reviews to remediation projects, cost savings (15–30% on average), customer satisfaction, and AWS-sourced pipeline growth.",
-    icon: "BarChart"
-  },
-  {
-    title: "Stage 7: Long-Term Growth",
-    description: "By embedding the Well-Architected Framework into all offerings, Digitspot positions itself as a long-term strategic partner for cloud transformation. Our GTM strategy uses the Well-Architected approach as both a credibility marker and a scalable growth engine.",
-    icon: "Rocket"
-  }
-],
-        faqs: [
-            {
-                question: "What is the AWS Well-Architected Framework?",
-                answer: "The AWS Well-Architected Framework is a set of best practices and guidelines designed to help cloud architects build secure, high-performing, resilient, and efficient infrastructure for applications. It consists of six pillars: operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability."
-            },
-            {
-                question: "How does the Well-Architected Framework benefit my business?",
-                answer: "By following the Well-Architected Framework, businesses can ensure their cloud architectures are aligned with AWS best practices, leading to improved security, reduced costs, enhanced performance, and greater reliability. It also helps identify potential risks and inefficiencies in your cloud environment."
-            },
-            {
-                question: "What is a Well-Architected Review?",
-                answer: "A Well-Architected Review is a structured assessment of your cloud architecture against the AWS Well-Architected Framework. It helps identify areas for improvement and provides actionable recommendations to enhance your cloud environment."
-            },
-            {
-                question: "How often should I perform a Well-Architected Review?",
-                answer: "It is recommended to perform a Well-Architected Review at least once a year or whenever significant changes are made to your architecture. Regular reviews help ensure your cloud environment remains aligned with best practices as your business evolves."
-            },
-            {
-                question: "Can the Well-Architected Framework be applied to existing applications?",
-                answer: "Yes, the Well-Architected Framework can be applied to both new and existing applications. It provides a structured approach to evaluate and improve your current cloud architectures regardless of when they were built."
-            }
-        ]
+  keyFeatures: [
+    "Operational excellence",
+    "Security best practices",
+    "Cost optimization",
+    "Reliability",
+    "Performance efficiency",
+    "Sustainability",
+  ],
+  benefits: [
+    {
+      title: "Operational excellence",
+      description:
+        "Streamlined processes and best practices that enhance efficiency and effectiveness in cloud operations.",
     },
+    {
+      title: "Security best practices",
+      description:
+        "Proven security frameworks and guidelines that protect sensitive data and ensure compliance.",
+    },
+    {
+      title: "Cost optimization",
+      description:
+        "Strategies to reduce cloud spending while maximizing performance and value.",
+    },
+    {
+      title: "Reliability",
+      description:
+        "Architectures designed for high availability and resilience against failures.",
+    },
+    {
+      title: "Performance efficiency",
+      description:
+        "Optimized resource utilization to deliver fast and responsive applications.",
+    },
+    {
+      title: "Sustainability",
+      description:
+        "Green cloud practices that minimize environmental impact and promote sustainability.",
+    },
+  ],
+  howItWorks: [
+    {
+      title: "Stage 1: Strategic Positioning",
+      description:
+        "Digitspot helps organizations build, optimize, and scale secure, resilient, cost-efficient, and sustainable cloud environments. By leveraging the AWS Well-Architected Framework, we demonstrate our commitment to delivering solutions aligned with AWS best practices and industry standards.",
+      icon: "Search",
+    },
+    {
+      title: "Stage 2: Target Market",
+      description:
+        "We focus on industries such as financial services, healthcare, public sector, and SaaS providers. Our primary buyer personas include CIOs, CTOs, VPs of Engineering, and Cloud/DevOps leaders. We address customer pain points like rising cloud costs, compliance risks, operational inefficiencies, and sustainability challenges.",
+      icon: "Users",
+    },
+    {
+      title: "Stage 3: Service Offerings",
+      description:
+        "Digitspot provides AWS Well-Architected Reviews, remediation and optimization engagements, managed cloud services, and industry-specific playbooks tailored for compliance-intensive sectors like healthcare and financial services.",
+      icon: "Cog",
+    },
+    {
+      title: "Stage 4: Market Activation",
+      description:
+        "We activate the market through AWS-aligned campaigns, thought leadership content (case studies, whitepapers, workshops), and targeted sales initiatives. Collaboration with AWS Partner Development Managers and participation in AWS events help drive visibility and pipeline growth.",
+      icon: "TrendingUp",
+    },
+    {
+      title: "Stage 5: Differentiation",
+      description:
+        "Our differentiation lies in embedding sustainability into every engagement, leveraging automation and governance tools such as AWS Config and guardrails, and delivering agile, outcomes-driven customer experiences compared to slower, less flexible consultancies.",
+      icon: "Sparkles",
+    },
+    {
+      title: "Stage 6: Success Metrics",
+      description:
+        "We measure success through KPIs like the number of Well-Architected Reviews conducted, conversion rates from reviews to remediation projects, cost savings (15–30% on average), customer satisfaction, and AWS-sourced pipeline growth.",
+      icon: "BarChart",
+    },
+    {
+      title: "Stage 7: Long-Term Growth",
+      description:
+        "By embedding the AWS Well-Architected Framework into all offerings, Digitspot positions itself as a long-term strategic partner for cloud transformation. Our GTM strategy uses the Well-Architected approach as both a credibility marker and a scalable growth engine.",
+      icon: "Rocket",
+    },
+  ],
+  faqs: [
+    {
+      question: "What is the AWS Well-Architected Framework?",
+      answer:
+        "The AWS Well-Architected Framework is a set of best practices and guidelines designed to help cloud architects build secure, high-performing, resilient, and efficient infrastructure for applications. It consists of six pillars: operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability.",
+    },
+    {
+      question: "How does the Well-Architected Framework benefit my business?",
+      answer:
+        "By following the AWS Well-Architected Framework, businesses can ensure their cloud architectures are aligned with AWS best practices, leading to improved security, reduced costs, enhanced performance, and greater reliability. It also helps identify potential risks and inefficiencies in your cloud environment.",
+    },
+    {
+      question: "What is a Well-Architected Review?",
+      answer:
+        "A Well-Architected Review is a structured assessment of your cloud architecture against the AWS Well-Architected Framework. It helps identify areas for improvement and provides actionable recommendations to enhance your cloud environment.",
+    },
+    {
+      question: "How often should I perform a Well-Architected Review?",
+      answer:
+        "It is recommended to perform a Well-Architected Review at least once a year or whenever significant changes are made to your architecture. Regular reviews help ensure your cloud environment remains aligned with best practices as your business evolves.",
+    },
+    {
+      question: "Can the Well-Architected Framework be applied to existing applications?",
+      answer:
+        "Yes, the AWS Well-Architected Framework can be applied to both new and existing applications. It provides a structured approach to evaluate and improve your current cloud architectures regardless of when they were built.",
+    },
+  ],
+}
+
+
 ]
 
 export function getServiceById(id: string): AWSService | undefined {

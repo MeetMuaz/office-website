@@ -17,6 +17,50 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        id: "cleatpath-multi-az-serverless-architecture",
+        title: "Building a Multi-AZ Serverless Architecture for CleatPath: A Nigerian Success Story",
+        excerpt: "Discover how we helped CleatPath, a multi-versed Nigerian company, achieve high availability, scalability, and cost efficiency through a robust serverless architecture on AWS.",
+        content: `
+# Building a Multi-AZ Serverless Architecture for CleatPath: A Nigerian Success Story
+
+## About CleatPath
+
+CleatPath is a Nigerian, multi-versed company that operates across various sectors, including Information Technology (ICT), power, and green energy solutions.
+
+## The Challenge
+
+The firm wanted a solution that is highly available with minimal downtime. They also required a workload that could scale seamlessly during traffic spikes. In addition, they wanted an affordable solution based on a pay-per-use model. The solution needed to store sensitive customer data in an isolated environment without data breaches. They also wanted their developers to be able to spin up workloads quickly in an automated manner, while minimizing manual operations and maintenance overhead.
+
+## Our Solution
+
+Digitspot, an AWS Advanced Partner, worked closely with CleatPath to design and implement a resilient Multi-AZ architecture that aligned with the company's requirements. AWS API Gateway was used to distribute traffic across multiple Availability Zones, ensuring seamless load balancing.
+
+We leveraged AWS Lambda with Step Functions to provide automatic scaling that supported over 1,000 concurrent executions. Step Functions were also used to orchestrate complex workflows with built-in state management. By adopting a serverless architecture, the firm benefited from a pay-per-use model, ensuring they were only charged for the resources consumed.
+
+Security was ensured by isolating compute resources within private subnets and routing all outbound traffic exclusively through NAT Gateways. API Gateway served as the single controlled entry point for external requests, while Snyk integration was implemented for continuous vulnerability scanning.
+
+For deployment velocity, AWS CloudFormation was used to enable consistent, repeatable infrastructure deployments and minimize errors caused by manual processes. Additionally, AWS CodePipeline and CodeBuild were implemented to deliver a fully automated CI/CD pipeline with integrated testing, ensuring faster and more reliable releases.
+
+## Results
+
+With the help of these AWS services and the support provided by Digitspot, CleatPath was able to build an application that is highly available, scalable, cost-efficient, secure, operationally efficient, and capable of rapid deployments.
+
+## About Digitspot
+
+Digitspot, established in 2011, continues to pursue its vision of helping both small and large-scale companies leverage cloud solutions to drive growth and innovation. As an AWS Advanced Partner, Digitspot remains committed to delivering world-class cloud strategies and implementations.
+    `,
+        author: {
+            name: "Balogun Muaz",
+            role: "DevOps Engineer",
+            avatar: "/muaz.jpg",
+        },
+        date: "August 21, 2025",
+        readTime: "6 min read",
+        category: "Case Study",
+        image: "/cleatpath.png",
+        tags: ["AWS", "Serverless", "Multi-AZ", "Lambda", "API Gateway", "Case Study"],
+    },
+    {
         id: "cloud-101-everything-you-need-to-know",
         title: "Cloud 101: Everything You Need to Know About Cloud Technology",
         excerpt:
@@ -287,7 +331,7 @@ This project showcases our expertise in building complex, multi-tenant platforms
         category: "Case Study",
         image: "/placeholder.svg?height=600&width=1200",
         tags: ["AWS", "Multi-tenant Architecture", "Digital Transformation", "Case Study", "Microservices"],
-    },
+    }
 ]
 
 export function getBlogPostById(id: string): BlogPost | undefined {
