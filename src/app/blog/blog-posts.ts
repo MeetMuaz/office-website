@@ -17,6 +17,128 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        id: "ecopeaks-multi-tier-platform",
+        title: "Building a Multi-Tier Enterprise Platform for Ecopeaks Limited: Scaling Nigerian Business Operations",
+        excerpt: "Discover how we helped Ecopeaks Limited, a diversified Nigerian conglomerate, implement a comprehensive multi-tier platform using AWS ECS, RDS, and Cognito to manage operations across agriculture, real estate, and logistics sectors.",
+        content: `
+# Building a Multi-Tier Enterprise Platform for Ecopeaks Limited: Scaling Nigerian Business Operations
+
+## About the Customer
+
+Ecopeaks Group is a Nigerian conglomerate founded in 2016, with businesses across various sectors including Information Technology, Power & Green Energy, Medical Services, Food & Beverages, and Agriculture.
+
+## Customer Challenge
+
+The company was facing several issues such as data fragmentation where files were spread across Excel, email, and legacy systems, about 70% of theatre workflows were still performed manually which led to errors and delays.
+
+They also struggled with limited accessibility since documents could only be accessed during business hours, and they couldn't comply with risk requirements due to lack of audit trails and regulatory compliance documentation.
+
+In addition, they faced high annual infrastructure costs of around $50,000 along with about 15% system downtime. If left unaddressed, these challenges would have continued to cause inefficiency, compliance risks, high costs, and limited scalability of their operations.
+
+## Partner Solution
+
+After Digitspot worked with them we were able to implement a cloud-first solution on AWS that solved these challenges.
+
+For Authentication & Customer Management, we deployed Amazon Cognito User Pools with custom attributes for business verticals, OAuth 2.0 with JWT tokens, and role-based access control across Customer, Vendor, Business Admin, and Super Admin. We also enabled social login integration (Google, Facebook, LinkedIn) with unified customer profile federation across all verticals.
+
+For Multi-Tenant Architecture, we used Amazon ECS Fargate to run microservices on a shared infrastructure with tenant isolation at the application layer, dynamic service routing per business vertical, and autoscaling supported by Amazon API Gateway and service mesh for inter-service communication.
+
+For Cross-Vertical Shopping Experience, we used Amazon DynamoDB for persistent shopping cart, Amazon ElastiCache for session management, real-time inventory synchronization, dynamic pricing, and a unified checkout supporting multiple payment methods across IT services, energy solutions, products, and consultations.
+
+For Business Intelligence & Analytics, we implemented Amazon QuickSight connected to Amazon Redshift, with data streaming via Amazon Kinesis Data Streams. This provided a 360-degree customer view, behavioral analytics, predictive modeling, vertical performance dashboards, and automated reports with alerts for key metrics.
+
+For Content Management & Search, we used Amazon S3 for storage, Amazon OpenSearch for search, and Amazon CloudFront for content delivery optimization. This supported multiple content formats, full-text search, and AI-powered product recommendations through Amazon Personalize.
+
+## Results and Benefits
+
+With this solution we were able to achieve single sign-on across all business verticals with a unified customer profile, reduce manual operations with a 60% reduction in administrative tasks and processes, and design a scalable architecture that could handle high traffic with minimal downtime.
+
+System performance improved to 99.5% uptime with page load times under 2 seconds across all platforms, while risk compliance and accessibility were fully addressed. Overall, the company saved significant operational costs and eliminated the 15% downtime previously faced.
+
+## About the Partner
+
+Digitspot, established in 2011, continues to pursue its vision of helping both small and large-scale companies leverage cloud solutions to drive growth and innovation. As an AWS Advanced Partner, Digitspot remains committed to delivering world-class cloud strategies and implementations.
+    `,
+        author: {
+            name: "Balogun Muaz",
+            role: "DevOps Engineer",
+            avatar: "/muaz.jpg",
+        },
+        date: "February 15, 2024",
+        readTime: "6 min read",
+        category: "Case Study",
+        image: "/ecopeaksgroup.png",
+        tags: ["AWS", "Multi-Tier Architecture", "ECS", "RDS", "Cognito", "Enterprise", "Case Study"],
+    },
+    {
+        id: "blythe-junot-centralized-cloud-storage",
+        title: "Building a Centralized Cloud Storage Solution for Blythe and Junot: A Nigerian Success Story",
+        excerpt: "Discover how we helped Blythe and Junot, one of Nigeria's top hygiene product manufacturers, implement a hybrid cloud storage solution using AWS Storage Gateway for seamless collaboration across departments.",
+        content: `
+# Building a Centralized Cloud Storage Solution for Blythe and Junot: A Nigerian Success Story
+
+## About Blythe and Junot
+
+Blythe and Junot is one of Nigeria's top manufacturers and distributors of hygiene, personal, laundry, and dental care products. With multiple departments including Production, Sales, and Accounts, the company has grown into a household name by ensuring consistent product quality and efficient nationwide distribution.
+
+## The Challenge
+
+As the business expanded, Blythe and Junot faced mounting challenges with their traditional file management approach. The company wanted a centralized and scalable file-sharing system to streamline collaboration across departments.
+
+They also required simple guest access for remote employees, secure cloud-based storage to reduce reliance on local infrastructure, and a cost-effective backup strategy for internal servers.
+
+Additionally, high availability and ease of access from any device, anywhere in the world, were critical business requirements.
+
+## Our Solution
+
+Digitspot, an AWS Advanced Partner, worked closely with Blythe and Junot to design and implement a hybrid cloud storage solution powered by AWS Storage Gateway. This architecture was built to deliver scalability, cost-effectiveness, and security while simplifying access for both internal and external users.
+
+### Centralized Storage Across Departments
+
+Amazon S3 was deployed as the storage backbone, with departmental prefixes created to organize files by Production, Sales, and Accounts.
+
+### Remote and Guest User Access
+
+AWS Storage Gateway was configured with SMB (Server Message Block) guest access support, enabling remote employees and temporary staff to collaborate seamlessly.
+
+### Secure and Scalable Cloud Backend
+
+By leveraging Amazon S3, Blythe and Junot gained a highly scalable and durable storage layer with built-in security and cost optimization.
+
+### Backup of Internal Files
+
+Storage Gateway shares were mapped as network drives across user devices and internal servers, ensuring that all local data was automatically backed up to the cloud.
+
+### High Availability
+
+The File Gateway was deployed on a resilient Amazon EC2 instance in a public subnet, ensuring continuous access to shared resources with minimal downtime.
+
+## Results
+
+With this cloud storage solution, Blythe and Junot achieved:
+
+- Centralized collaboration across all departments
+- Improved accessibility for remote and guest users
+- Secure, scalable storage with reduced reliance on local infrastructure
+- Cost-effective backups of sensitive internal files
+- High availability of shared resources, ensuring business continuity
+
+## About Digitspot
+
+Digitspot, established in 2011, continues to help organizations across Africa and beyond embrace cloud-driven innovation. As an AWS Advanced Partner, Digitspot remains committed to delivering solutions that are secure, scalable, cost-efficient, and future-ready.
+    `,
+        author: {
+             name: "Balogun Muaz",
+            role: "DevOps Engineer",
+            avatar: "/muaz.jpg",
+        },
+        date: "January 20, 2024",
+        readTime: "7 min read",
+        category: "Case Study",
+        image: "/blytheandjunot.png",
+        tags: ["AWS", "Storage Gateway", "S3", "Cloud Storage", "Case Study", "Hybrid Cloud"],
+    },
+    {
         id: "cleatpath-multi-az-serverless-architecture",
         title: "Building a Multi-AZ Serverless Architecture for CleatPath: A Nigerian Success Story",
         excerpt: "Discover how we helped CleatPath, a multi-versed Nigerian company, achieve high availability, scalability, and cost efficiency through a robust serverless architecture on AWS.",
@@ -29,7 +151,9 @@ CleatPath is a Nigerian, multi-versed company that operates across various secto
 
 ## The Challenge
 
-The firm wanted a solution that is highly available with minimal downtime. They also required a workload that could scale seamlessly during traffic spikes. In addition, they wanted an affordable solution based on a pay-per-use model. The solution needed to store sensitive customer data in an isolated environment without data breaches. They also wanted their developers to be able to spin up workloads quickly in an automated manner, while minimizing manual operations and maintenance overhead.
+The firm wanted a solution that is highly available with minimal downtime. They also required a workload that could scale seamlessly during traffic spikes. In addition, they wanted an affordable solution based on a pay-per-use model.
+
+The solution needed to store sensitive customer data in an isolated environment without data breaches. They also wanted their developers to be able to spin up workloads quickly in an automated manner, while minimizing manual operations and maintenance overhead.
 
 ## Our Solution
 
@@ -174,162 +298,75 @@ Don't wait for a disaster to realize the value of your data. Start backing up to
         tags: ["Cloud Backup", "Data Protection", "Business Continuity", "Security"],
     },
     {
-        id: "olive-olive-unified-digital-platform-case-study",
-        title: "How We Built a Unified Digital Platform for Olive & Olive's Four Business Verticals",
-        excerpt: "Discover how we transformed Olive & Olive's business operations by unifying four distinct verticals—IT Services, Energy Solutions, eCommerce, and Advisory—into a single, seamless digital ecosystem on AWS.",
+        id: "olive-olive-digital-transformation",
+        title: "Driving Digital Transformation for OliveandOlive MultiServices: Scaling Distribution Operations in Nigeria",
+        excerpt: "Discover how we helped OliveandOlive MultiServices, a Nigerian distributor of leading food, household, and personal care products, implement a cloud-first multi-tenant platform that enabled 3x business growth and 60% reduction in manual tasks.",
         content: `
-# How We Built a Unified Digital Platform for Olive & Olive's Four Business Verticals
+# Driving Digital Transformation for OliveandOlive MultiServices: Scaling Distribution Operations in Nigeria
 
-## The Challenge: Four Businesses, One Vision
+## About the Customer
 
-Olive & Olive came to us with an ambitious goal: unify four distinct business verticals—IT Services, Energy Solutions, eCommerce, and Advisory—into a single, cohesive digital ecosystem. Operating across Nigeria and expanding into West Africa, they needed a platform that could deliver seamless customer journeys, unified account management, and cross-vertical integration while supporting their aggressive growth plans.
+OliveandOlive MultiServices is a Nigerian distributor of leading food, household, and personal care products including Honeywell, Golden Penny, Dangote, PZ, Molfix, Femina, Lady Care, and Euro Mega. The company leverages information and telecommunication technology to drive maximum operational efficiency.
 
-The challenges were significant:
-- **Fragmented Operations**: Each vertical operated independently with separate systems and processes
-- **Customer Experience**: Clients had to manage multiple accounts and relationships across different services
-- **Operational Inefficiency**: Manual workflows dominated most business processes
-- **Scalability Concerns**: Existing systems couldn't support expansion across Nigeria and into Ghana
-- **Integration Complexity**: No unified view of customers, inventory, or business performance
+## Customer Challenge
 
-## Our Solution: Multi-Tenant, Cloud-Native Architecture
+Despite its growing success, OliveandOlive faced several business and IT challenges that limited its ability to scale. Customer information was fragmented across multiple systems, preventing a unified view of activity and reducing opportunities for cross-selling. About 70% of inter-departmental workflows were still handled manually, resulting in delays and errors.
 
-We designed and implemented a comprehensive **multi-tenant, cloud-native platform** on AWS that addresses each of these challenges while positioning Olive & Olive for future growth.
+The company's market expansion was also constrained geographically, with operations concentrated in Lagos, while competitive pressures demanded digital transformation to stay ahead of technology-forward rivals. Additionally, existing systems lacked the scalability to handle the company's projected 3x business growth within the next two years.
 
-### Core Architecture Components
+Without addressing these challenges, OliveandOlive risked losing competitive advantage, slowing growth, and increasing operational inefficiency.
 
-**Unified Authentication & Identity Management**
-- **Amazon Cognito** provides single sign-on across all four verticals
-- Role-based access control ensures appropriate permissions for different user types
-- Seamless user experience with one account for all services
+## Partner Solution
 
-**Microservices Architecture**
-- **Amazon ECS Fargate** powers individual microservices for each vertical
-- Containerized applications ensure scalability and maintainability
-- Independent deployment and scaling for each business vertical
+Digitspot, an AWS Advanced Partner, worked closely with OliveandOlive to design and implement a cloud-first, multi-tenant enterprise platform on AWS that addressed these challenges.
 
-**Centralized Data Management**
-- Unified customer database providing 360-degree customer view
-- Shared APIs enable cross-selling opportunities and integrated billing
-- Real-time data synchronization across all verticals
+### Authentication & Customer Management
 
-### Key Platform Features
+We deployed Amazon Cognito User Pools with custom attributes for business verticals, OAuth 2.0 with JWT tokens, and role-based access control covering Customer, Vendor, Business Admin, and Super Admin. Social login integration with Google, Facebook, and LinkedIn was added, while customer profile federation enabled a unified identity across all business verticals.
 
-**Multi-Channel Customer Experience**
-- Multi-language, mobile-first React.js Progressive Web App (PWA)
-- Native React Native mobile applications for iOS and Android
-- Responsive design optimized for Nigerian and West African markets
+### Multi-Tenant Architecture
 
-**Real-Time Business Intelligence**
-- **Amazon DynamoDB** and **ElastiCache** for real-time inventory tracking
-- Live project monitoring and energy system performance dashboards
-- **Amazon Redshift** and **QuickSight** for comprehensive business analytics
+The platform was built using microservices running on Amazon ECS Fargate with shared infrastructure. Tenant isolation was implemented at the application layer with shared database schemas, dynamic service routing, and horizontal autoscaling. Inter-service communication was supported by Amazon API Gateway and a service mesh.
 
-**Integrated Business Operations**
-- Automated vendor onboarding and procurement processes
-- Unified shopping cart across eCommerce and service offerings
-- Integrated logistics and delivery management
-- Cross-vertical project and resource management
+### Cross-Vertical Shopping Experience
 
-**Security & Compliance**
-- End-to-end encryption for all data transmission and storage
-- Secure document management with role-based access
-- Regulatory compliance for Nigerian and Ghanaian markets
-- PCI DSS compliant payment processing integration
+We used Amazon DynamoDB for persistent shopping carts and Amazon ElastiCache for session management. This enabled real-time inventory synchronization, dynamic pricing, bulk discounts, cross-vertical promotions, and a unified checkout process supporting multiple payment methods across IT services, energy solutions, retail products, and advisory consultations.
 
-## Implementation Approach
+### Business Intelligence & Analytics
 
-### Phase 1: Foundation & Core Services
-We started by establishing the core infrastructure and implementing the unified authentication system. This provided the foundation for all subsequent development while ensuring security and scalability from day one.
+To give OliveandOlive data-driven insights, we implemented Amazon QuickSight integrated with Amazon Redshift and real-time data streaming through Amazon Kinesis Data Streams. This provided a 360-degree customer view, predictive analytics, behavioral insights, vertical performance dashboards, and automated reporting with alerts for key business metrics.
 
-### Phase 2: Vertical Integration
-Each business vertical was systematically integrated into the platform, starting with the most critical customer-facing services. This phased approach minimized disruption to ongoing operations.
+### Content Management & Search
 
-### Phase 3: Advanced Features & Analytics
-Once the core platform was operational, we implemented advanced features like business intelligence dashboards, automated workflows, and cross-vertical integration capabilities.
+The platform used Amazon S3 for asset storage and Amazon OpenSearch for enterprise-wide search functionality. Content delivery was optimized with Amazon CloudFront, supporting images, videos, documents, and even 3D models for solar installations. To further boost customer engagement, Amazon Personalize was integrated for AI-driven product recommendations.
 
-### Phase 4: Optimization & Expansion
-The final phase focused on performance optimization and preparing the platform for geographic expansion into Ghana and other West African markets.
+## Results and Benefits
 
-## Results: Transforming Business Operations
+The AWS-powered platform delivered measurable improvements:
 
-The unified digital platform has delivered transformative results for Olive & Olive:
+**Customer Experience**: Single sign-on across all business verticals with a unified customer profile
 
-**Operational Efficiency**
-- Automated most manual workflows, reducing processing time by 70%
-- Eliminated duplicate data entry across verticals
-- Streamlined customer onboarding and service delivery
+**Operational Efficiency**: 60% reduction in manual administrative tasks and handoffs
 
-**Customer Experience**
-- Single sign-on across all services improves customer satisfaction
-- Unified billing and account management reduces customer friction
-- Cross-vertical service recommendations increase customer lifetime value
+**Scalability**: Architecture designed to handle the projected 3x growth with ease
 
-**Business Growth**
-- Platform supports expansion to five Nigerian states plus Ghana
-- Scalable architecture accommodates 10x growth without major changes
-- Real-time analytics enable data-driven business decisions
+**Performance**: 99.5% uptime with <2s page load times across all platforms
 
-**Revenue Impact**
-- Significant revenue growth through improved operational efficiency
-- Cross-selling opportunities increase average customer value
-- Reduced operational costs through automation and consolidation
+With this solution, OliveandOlive was able to unify operations, enhance customer experience, and position itself for long-term digital growth.
 
-## Technical Highlights
+## About the Partner
 
-**Scalability & Performance**
-- Auto-scaling infrastructure handles traffic spikes automatically
-- CDN integration ensures fast loading times across West Africa
-- Microservices architecture allows independent scaling of each vertical
-
-**Security & Reliability**
-- Multi-layer security with encryption at rest and in transit
-- Automated backup and disaster recovery procedures
-- 99.9% uptime SLA with redundant infrastructure
-
-**Integration Capabilities**
-- RESTful APIs enable easy integration with third-party services
-- Webhook support for real-time data synchronization
-- Flexible data export and reporting capabilities
-
-## Lessons Learned
-
-**Start with Strong Foundations**
-Investing in robust authentication, security, and data architecture from the beginning pays dividends throughout the project lifecycle.
-
-**Phased Implementation Reduces Risk**
-Implementing the platform in phases allowed us to validate each component before moving to the next, reducing overall project risk.
-
-**User Experience is Critical**
-Focusing on seamless user experience across all touchpoints was essential for adoption and customer satisfaction.
-
-**Plan for Scale from Day One**
-Designing for future growth requirements, even when current needs are smaller, prevents costly re-architecture later.
-
-## The Future: Continued Innovation
-
-The platform we built for Olive & Olive is designed for continuous evolution. Future enhancements include:
-- AI-powered customer service and recommendations
-- Advanced predictive analytics for inventory and demand forecasting
-- Integration with emerging fintech solutions for the West African market
-- Expansion support for additional countries and business verticals
-
-## Conclusion
-
-The Olive & Olive unified digital platform demonstrates the power of thoughtful architecture and strategic technology choices. By leveraging AWS's robust cloud services and implementing a customer-centric design approach, we created a solution that not only meets today's needs but positions the business for continued growth and success.
-
-This project showcases our expertise in building complex, multi-tenant platforms that unify diverse business operations while maintaining the flexibility and scalability needed for rapid growth in emerging markets.
-
-**Ready to transform your business operations?** Contact Digitspot today to learn how we can help you build a unified digital platform that drives growth and operational excellence.
+Digitspot, established in 2011, continues to pursue its vision of helping both small and large-scale companies leverage cloud solutions to drive growth and innovation. As an AWS Advanced Partner, Digitspot remains committed to delivering world-class cloud strategies and implementations.
     `,
         author: {
-            name: "Akeredolu Damilola",
-            role: "Solutions Architect",
-            avatar: "/placeholder.svg?height=100&width=100",
+            name: "Balogun Muaz",
+            role: "DevOps Engineer",
+            avatar: "/muaz.jpg",
         },
         date: "January 12, 2024",
-        readTime: "8 min read",
+        readTime: "7 min read",
         category: "Case Study",
-        image: "/placeholder.svg?height=600&width=1200",
+        image: "/oliveandolive.png",
         tags: ["AWS", "Multi-tenant Architecture", "Digital Transformation", "Case Study", "Microservices"],
     }
 ]

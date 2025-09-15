@@ -76,7 +76,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
       formData.append('image', file)
       
       try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        await fetch('https://jsonplaceholder.typicode.com/posts', {
           method: 'POST',
           body: formData
         })
@@ -85,7 +85,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
         const imageUrl = `https://via.placeholder.com/800x400?text=${encodeURIComponent(file.name)}`
         insertText(`![${file.name}](${imageUrl})\n`)
         setShowImageModal(false)
-      } catch (error) {
+      } catch {
         alert('Error uploading image')
       }
     }

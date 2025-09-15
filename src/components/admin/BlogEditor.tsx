@@ -82,7 +82,7 @@ export function BlogEditor() {
         })
         setImagePreview('')
       }
-    } catch (error) {
+    } catch {
       alert('Error submitting blog post')
     } finally {
       setIsSubmitting(false)
@@ -203,6 +203,7 @@ export function BlogEditor() {
                 />
                 {imagePreview && (
                   <div className="mt-2">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={imagePreview}
                       alt="Preview"
